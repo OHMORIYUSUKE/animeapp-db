@@ -14,8 +14,15 @@ export class GetApiResponse {
     const yearDigit = String(params.year).length;
     const coolDigit = String(params.cool).length;
     const today = new Date();
-    if (yearDigit === 4 && coolDigit === 1) return true;
-    if (2013 < params.year && params.year <= today.getFullYear()) return true;
+    if (
+      yearDigit === 4 &&
+      coolDigit === 1 &&
+      2013 < params.year &&
+      params.year <= today.getFullYear() &&
+      params.cool >= 1 &&
+      params.cool <= 4
+    )
+      return true;
     return false;
   }
 
@@ -32,7 +39,7 @@ export class GetApiResponse {
       String(params.cool);
     const getApiResponse = new GetApiResponse();
     const res = await superagent.get(url);
-    if (res.statusCode !== 200) {
+    if (res.status !== 200) {
       throw new Error(
         "apiから情報を取得できませんでした。ステータスコード:" + res.statusCode
       );

@@ -18,7 +18,7 @@ async function main(): Promise<void> {
 
   const getApiResponse = await GetApiResponse.getApiResponse({
     year: 2022,
-    cool: 3,
+    cool: 4,
   });
   console.log(getApiResponse.jsonPerse());
 }

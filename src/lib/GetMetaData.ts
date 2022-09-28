@@ -9,7 +9,7 @@ export class GetMetaData {
   public static async getSuperagentResponse(url: string): Promise<GetMetaData> {
     const getMetaData = new GetMetaData();
     const res = await superagent.get(url);
-    if (res.statusCode !== 200) {
+    if (res.status !== 200) {
       throw new Error(
         "webページが正常に動作していません。ステータスコード:" + res.statusCode
       );
