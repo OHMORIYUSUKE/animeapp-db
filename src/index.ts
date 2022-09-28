@@ -1,26 +1,17 @@
-import superagent from "superagent";
-import cheerio from "cheerio";
+import { GetMetaData } from "./lib/GetMetaData";
 
-import { fizzbuzz } from "./lib/fizzbuzz";
+async function main(): Promise<void> {
+  const aa = await GetMetaData.getSuperagentResponse(
+    "https://isekai-harem.com/"
+  );
+  console.log(aa.image());
+  console.log(aa.description());
 
-const num = 3;
-console.log(fizzbuzz(num));
-
-class Crowller {
-  private url = "https://qiita.com/suzuki_sh/items/f3349efbfe1bdfc0c634";
-  constructor() {
-    this.getRawHtml();
-  }
-  async getRawHtml() {
-    const result = await superagent.get(this.url);
-    this.getJobInfo(result.text);
-  }
-
-  getJobInfo(html: string) {
-    const $ = cheerio.load(html);
-    const text = $("h1.css-188vyrl").text();
-    console.log(text);
-  }
+  const bb = await GetMetaData.getSuperagentResponse(
+    "https://lycoris-recoil.com/"
+  );
+  console.log(bb.image());
+  console.log(bb.description());
 }
 
-const crowller = new Crowller();
+main();
