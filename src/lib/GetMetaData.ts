@@ -10,6 +10,11 @@ export class GetMetaData {
   public static async getSuperagentResponse(url: string): Promise<GetMetaData> {
     const getMetaData = new GetMetaData();
     const res = await superagent.get(url);
+    if (res.statusCode !== 200) {
+      throw new Error(
+        "webページが正常に動作していません。ステータスコード:" + res.statusCode
+      );
+    }
     this.html = res.text;
     this.$ = cheerio.load(res.text);
     return getMetaData;
@@ -17,6 +22,11 @@ export class GetMetaData {
 
   public image(): string {
     const image = GetMetaData.$('meta[property="og:image"]').attr("content");
+    if (image?.startsWith("http://")) {
+      throw new Error(
+        "ogp画像がhttpに存在するため無視されました。画像url:" + image
+      );
+    }
     if (image === undefined) {
       throw new Error("ogp画像が見つかりませんでした。");
     } else {
