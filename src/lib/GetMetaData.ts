@@ -2,7 +2,6 @@ import superagent from "superagent";
 import cheerio from "cheerio";
 
 export class GetMetaData {
-  private static html: string;
   private static $: cheerio.Root;
 
   constructor() {}
@@ -15,7 +14,6 @@ export class GetMetaData {
         "webページが正常に動作していません。ステータスコード:" + res.statusCode
       );
     }
-    this.html = res.text;
     this.$ = cheerio.load(res.text);
     return getMetaData;
   }

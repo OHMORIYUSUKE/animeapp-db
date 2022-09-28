@@ -1,5 +1,4 @@
 import superagent from "superagent";
-import cheerio from "cheerio";
 
 interface UrlParams {
   year: number;
