@@ -37,10 +37,6 @@ export class GetDataAndSave {
               },
             };
           } catch (e) {
-            if ("うる星やつら" == animeData.title) {
-              console.log(animeData.title, e);
-              throw new Error();
-            }
             return {
               ...animeData,
               ...{
