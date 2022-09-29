@@ -20,9 +20,10 @@ export class GetMetaData {
 
   public image(): string {
     const image = GetMetaData.$('meta[property="og:image"]').attr("content");
-    if (image?.startsWith("http://")) {
+    if (!image?.startsWith("https://")) {
       throw new Error(
-        "ogp画像がhttpに存在するため無視されました。画像url:" + image
+        "ogp画像がhttpsに存在していない、または不正なurlのため無視されました。画像url:" +
+          image
       );
     }
     if (image === undefined) {

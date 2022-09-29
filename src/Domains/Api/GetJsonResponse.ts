@@ -1,16 +1,19 @@
 import superagent from "superagent";
+import { z } from "zod";
 
-interface UrlParams {
+import { ShangriLaResponse } from "../../Models/Api/ShangriLa";
+
+export interface UrlParams {
   year: number;
   cool: number;
 }
 
-export class GetApiResponse {
+export class GetJsonResponse {
   private static json: string;
 
   constructor() {}
 
-  private static getApiResponseValidator(params: UrlParams): boolean {
+  private static getJsonResponseValidator(params: UrlParams): boolean {
     const yearDigit = String(params.year).length;
     const coolDigit = String(params.cool).length;
     const today = new Date();
@@ -26,10 +29,10 @@ export class GetApiResponse {
     return false;
   }
 
-  public static async getApiResponse(
+  public static async getJsonResponse(
     params: UrlParams
-  ): Promise<GetApiResponse> {
-    if (!GetApiResponse.getApiResponseValidator(params)) {
+  ): Promise<GetJsonResponse> {
+    if (!GetJsonResponse.getJsonResponseValidator(params)) {
       throw new Error("引数に誤りがあります。");
     }
     const url =
@@ -37,7 +40,7 @@ export class GetApiResponse {
       String(params.year) +
       "/" +
       String(params.cool);
-    const getApiResponse = new GetApiResponse();
+    const getApiResponse = new GetJsonResponse();
     const res = await superagent.get(url);
     if (res.status !== 200) {
       throw new Error(
@@ -48,9 +51,9 @@ export class GetApiResponse {
     return getApiResponse;
   }
 
-  public jsonPerse(): any {
-    const data = GetApiResponse.json;
-    // 型変換処理TODO
-    return data;
+  public jsonPerse(): z.infer<typeof ShangriLaResponse> {
+    const json = GetJsonResponse.json;
+    const validJson = ShangriLaResponse.parse(JSON.parse(JSON.stringify(json)));
+    return validJson;
   }
 }

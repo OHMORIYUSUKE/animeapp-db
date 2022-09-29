@@ -1,26 +1,56 @@
-import { GetApiResponse } from "./lib/GetApiResponse";
-import { GetMetaData } from "./lib/GetMetaData";
+import { z } from "zod";
+import { GetJsonResponse, UrlParams } from "./Domains/Api/GetJsonResponse";
+import { ApiJson } from "./Domains/Save/ApiJson";
+import { GetMetaData } from "./Domains/Scraping/GetMetaData";
+
+import { AnimeLibrary, AnimeLibraryResponse } from "./Models/Api/AnimeLibrary";
 
 async function main(): Promise<void> {
-  const aa = await GetMetaData.getSuperagentResponse(
-    "https://isekai-harem.com/"
-  );
-  console.log(aa.image());
-  console.log(aa.description());
-
-  const bb = await GetMetaData.getSuperagentResponse(
-    "https://lycoris-recoil.com/"
-  );
-  console.log(bb.image());
-  console.log(bb.description());
-
-  //
-
-  const getApiResponse = await GetApiResponse.getApiResponse({
+  const getJsonResponse = await GetJsonResponse.getJsonResponse({
     year: 2022,
     cool: 4,
-  });
-  console.log(getApiResponse.jsonPerse());
+  } as UrlParams);
+
+  // スクレイピング
+  const shangriLaApiResponse = getJsonResponse.jsonPerse();
+
+  const animeLibraryResponse = await Promise.all(
+    shangriLaApiResponse.map(
+      async (animeData): Promise<z.infer<typeof AnimeLibrary>> => {
+        try {
+          const metaData = await GetMetaData.getSuperagentResponse(
+            animeData.public_url
+          );
+          return {
+            ...animeData,
+            ...{
+              ogp_description: metaData.description(),
+              ogp_image_url: metaData.image(),
+            },
+          };
+        } catch (e) {
+          return {
+            ...animeData,
+            ...{
+              ogp_description: "",
+              ogp_image_url: "",
+            },
+          };
+        }
+      }
+    )
+  );
+
+  // save
+  const saveRes = await ApiJson.save(
+    {
+      year: 2022,
+      cool: 4,
+    } as UrlParams,
+    AnimeLibraryResponse.parse(animeLibraryResponse)
+  );
+
+  console.log(saveRes);
 }
 
 main();
