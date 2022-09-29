@@ -1,5 +1,6 @@
 import superagent from "superagent";
 import cheerio from "cheerio";
+import { ConstValues } from "../Utils/ConstValues";
 
 export class GetMetaData {
   private static $: cheerio.Root;
@@ -8,10 +9,12 @@ export class GetMetaData {
 
   public static async getSuperagentResponse(url: string): Promise<GetMetaData> {
     const getMetaData = new GetMetaData();
-    const res = await superagent.get(url);
-    if (res.status !== 200) {
+    let res: superagent.Response;
+    try {
+      res = await superagent.get(url).timeout(ConstValues.httpTimeOut);
+    } catch (e) {
       throw new Error(
-        "webページが正常に動作していません。ステータスコード:" + res.statusCode
+        "webページから情報を取得できませんでした。エラーメッセージ:" + e
       );
     }
     this.$ = cheerio.load(res.text);

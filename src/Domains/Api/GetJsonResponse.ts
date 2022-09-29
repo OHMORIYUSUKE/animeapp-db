@@ -2,6 +2,7 @@ import superagent from "superagent";
 import { z } from "zod";
 
 import { ShangriLaResponse } from "../../Models/Api/ShangriLa";
+import { ConstValues } from "../Utils/ConstValues";
 
 export interface UrlParams {
   year: number;
@@ -20,7 +21,7 @@ export class GetJsonResponse {
     if (
       yearDigit === 4 &&
       coolDigit === 1 &&
-      2013 < params.year &&
+      ConstValues.startYear <= params.year &&
       params.year <= today.getFullYear() &&
       params.cool >= 1 &&
       params.cool <= 4
@@ -41,10 +42,12 @@ export class GetJsonResponse {
       "/" +
       String(params.cool);
     const getApiResponse = new GetJsonResponse();
-    const res = await superagent.get(url);
-    if (res.status !== 200) {
+    let res: superagent.Response;
+    try {
+      res = await superagent.get(url).timeout(ConstValues.httpTimeOut);
+    } catch (e) {
       throw new Error(
-        "apiから情報を取得できませんでした。ステータスコード:" + res.statusCode
+        "apiから情報を取得できませんでした。エラーメッセージ:" + e
       );
     }
     this.json = res.body;
@@ -53,7 +56,16 @@ export class GetJsonResponse {
 
   public jsonPerse(): z.infer<typeof ShangriLaResponse> {
     const json = GetJsonResponse.json;
-    const validJson = ShangriLaResponse.parse(JSON.parse(JSON.stringify(json)));
-    return validJson;
+    try {
+      const validJson = ShangriLaResponse.parse(
+        JSON.parse(JSON.stringify(json))
+      );
+      return validJson;
+    } catch (e) {
+      throw new Error(
+        "apiのjsonをパースできませんでした。apiに変更の可能性があります。エラーメッセージ:" +
+          e
+      );
+    }
   }
 }
