@@ -14,6 +14,8 @@ export class GetDataAndSave {
     try {
       getJsonResponse = await GetJsonResponse.getJsonResponse(urlParams);
     } catch (e) {
+      console.log(e);
+      throw new Error();
       //{message: "no_data"} jsonを保存
       const saveRes = await ApiJson.save(urlParams, { message: "no_data" });
       return saveRes;
