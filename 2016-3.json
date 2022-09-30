@@ -689,8 +689,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "",
-    "ogp_image_url": "https://www.tbs.co.jp/anime/handaanime/img/logo.jpg",
-    "ogp_description": "TVアニメ『はんだくん』の公式サイト。TBS・BS-TBSにて2016年7月放送予定！"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 398,
@@ -710,8 +710,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "",
-    "ogp_image_url": "https://www.tbs.co.jp/anime/konobi/img/logo.jpg",
-    "ogp_description": "TVアニメ『この美術部には問題がある！』の公式サイト。TBS・BS-TBSにて2016年7月放送予定！"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 399,
