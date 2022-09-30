@@ -8,16 +8,15 @@ import { AnimeLibrary, AnimeLibraryResponse } from "../Models/Api/AnimeLibrary";
 export class GetDataAndSave {
   constructor() {}
 
-  protected static async getDataAndsave(urlParams: UrlParams): Promise<void> {
+  public static async getDataAndsave(urlParams: UrlParams): Promise<void> {
     // shangriLaApiからjsonを取得
     let getJsonResponse: GetJsonResponse;
     try {
       getJsonResponse = await GetJsonResponse.getJsonResponse(urlParams);
     } catch (e) {
       console.log(e);
-      throw new Error();
       //{message: "no_data"} jsonを保存
-      const saveRes = await ApiJson.save(urlParams, { message: "no_data" });
+      const saveRes = ApiJson.save(urlParams, { message: "no_data" });
       return saveRes;
     }
 
@@ -52,7 +51,7 @@ export class GetDataAndSave {
     );
 
     // jsonを保存
-    const saveRes = await ApiJson.save(
+    const saveRes = ApiJson.save(
       urlParams,
       AnimeLibraryResponse.parse(animeLibraryResponse)
     );
