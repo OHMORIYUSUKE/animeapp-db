@@ -19,6 +19,7 @@ export class ApiJson {
       String(fileNameData.year) + "-" + String(fileNameData.cool) + ".json";
     const stringSavedata = JSON.stringify(saveData, null, 2);
     try {
+      fs.mkdirSync(ConstValues.jsonSaveDir, { recursive: true });
       fs.writeFileSync(ConstValues.jsonSaveDir + fileName, stringSavedata, {
         flag: "w",
       });
