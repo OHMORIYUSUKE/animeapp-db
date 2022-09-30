@@ -8,7 +8,7 @@ import { AnimeLibrary, AnimeLibraryResponse } from "../Models/Api/AnimeLibrary";
 export class GetDataAndSave {
   constructor() {}
 
-  public static async getDataAndsave(urlParams: UrlParams): Promise<void> {
+  protected static async getDataAndsave(urlParams: UrlParams): Promise<void> {
     // shangriLaApiからjsonを取得
     let getJsonResponse: GetJsonResponse;
     try {
