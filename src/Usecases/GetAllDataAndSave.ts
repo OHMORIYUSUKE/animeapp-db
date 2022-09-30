@@ -7,7 +7,7 @@ export class GetAllDataAndSave extends GetDataAndSave {
     super();
   }
 
-  public static async getAllDataAndSave(): Promise<void[]> {
+  public static async getAllDataAndSave(): Promise<void> {
     // すべての年とクールの情報
     const today = new Date();
     const nowYear = today.getFullYear();
@@ -25,14 +25,5 @@ export class GetAllDataAndSave extends GetDataAndSave {
       }
       await GetDataAndSave.getDataAndsave(urlParam);
     }
-
-    // データの取得と保存
-    const res = await Promise.all(
-      allUrlParams.map(async (urlParam): Promise<void> => {
-        await GetDataAndSave.getDataAndsave(urlParam);
-      })
-    );
-
-    return res;
   }
 }
