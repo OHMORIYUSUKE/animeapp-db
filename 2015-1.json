@@ -269,8 +269,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "",
-    "ogp_image_url": "",
-    "ogp_description": ""
+    "ogp_image_url": "https://junketsu-maria.tv/img/ogp.jpg",
+    "ogp_description": "石川雅之の大人気コミックを、監督：谷口悟朗×Production I.G×豪華スタッフが送り出す、本格派TVアニメーション！"
   },
   {
     "id": 138,
@@ -563,8 +563,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "",
-    "ogp_image_url": "",
-    "ogp_description": ""
+    "ogp_image_url": "https://www.tv-tokyo.co.jp/anime/sengokumusou/images/facebook_icon.jpg",
+    "ogp_description": " 世は戦国時代。乱世の運命に翻弄される、真田兄弟の熱く切ない物語。"
   },
   {
     "id": 152,
