@@ -2,6 +2,7 @@ import { z } from "zod";
 import { GetJsonResponse, UrlParams } from "../Domains/Api/GetJsonResponse";
 import { ApiJson } from "../Domains/Save/ApiJson";
 import { GetMetaData } from "../Domains/Scraping/GetMetaData";
+import { ReplaceInvalidChars } from "../Domains/Url/ReplaceInvalidChars";
 
 import { AnimeLibrary, AnimeLibraryResponse } from "../Models/Api/AnimeLibrary";
 
@@ -50,10 +51,20 @@ export class GetDataAndSave {
       )
     );
 
+    // titleを?などをreplaceしたものにする
+    const animeLibraryResponseReplaced = animeLibraryResponse.map(
+      (animeData) => {
+        animeData.title = ReplaceInvalidChars.replaceInvalidChars(
+          animeData.title
+        );
+        return animeData;
+      }
+    );
+
     // jsonを保存
     const saveRes = ApiJson.save(
       urlParams,
-      AnimeLibraryResponse.parse(animeLibraryResponse)
+      AnimeLibraryResponse.parse(animeLibraryResponseReplaced)
     );
 
     return saveRes;
