@@ -17,7 +17,7 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "サブリメイション",
-    "ogp_image_url": "https://occ-0-3011-114.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABeyLxMtoH6bFiVFfksurmqipTSj8ZU5vxn4XJBrqn7Y2xpD24OSsgNc34PSrdCBN8uNomQ0nHPkRuEw9Dxr6WFHHZrP9l44MhIKb.jpg?r=905",
+    "ogp_image_url": "https://occ-0-3012-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABeyLxMtoH6bFiVFfksurmqipTSj8ZU5vxn4XJBrqn7Y2xpD24OSsgNc34PSrdCBN8uNomQ0nHPkRuEw9Dxr6WFHHZrP9l44MhIKb.jpg?r=905",
     "ogp_description": "Resurrected as an Arisen, Ethan sets out to vanquish the Dragon that took his heart. But with every demon he battles, his humanity slips further away."
   },
   {
@@ -836,8 +836,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "エンカレッジフィルムズ",
-    "ogp_image_url": "https://gochiusa.com/bloom/core_sys/images/others/ogp.jpg",
-    "ogp_description": "ココアが木組みの街で過ごす二度目の夏ももうすぐ終わり、季節はイベント盛りだくさんの秋へと移り変わろうとしています。学校にもラビットハウスにも、楽しいことが今日もいっぱい！ココア、チノ、そしてみんなの未来へのわくわくが止まりません……！"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 1216,
@@ -1046,8 +1046,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "サンライズ",
-    "ogp_image_url": "https://www.lovelive-anime.jp/nijigasaki/logo.png",
-    "ogp_description": "ラブライブ！虹ヶ咲学園スクールアイドル同好会の公式サイトです！"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 1226,
