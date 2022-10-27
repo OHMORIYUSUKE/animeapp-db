@@ -8,10 +8,7 @@ export const ShangriLa = z.object({
   title_short2: z.string(),
   title_short3: z.string(),
   title_en: z.string(),
-  public_url: z.union([
-    z.string().url().min(1).startsWith("https://"),
-    z.string().url().min(1).startsWith("http://"),
-  ]),
+  public_url: z.union([z.string().url().min(1).startsWith("https://"), z.string().url().min(1).startsWith("http://")]),
   twitter_account: z.string().min(1),
   twitter_hash_tag: z.string().min(1),
   cours_id: z.number().nonnegative(),

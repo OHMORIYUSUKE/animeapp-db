@@ -7,8 +7,6 @@ import { ReplaceInvalidChars } from "../Domains/Url/ReplaceInvalidChars";
 import { AnimeLibrary, AnimeLibraryResponse } from "../Models/Api/AnimeLibrary";
 
 export class GetDataAndSave {
-  constructor() {}
-
   protected static async getDataAndsave(urlParams: UrlParams): Promise<void> {
     // shangriLaApiからjsonを取得
     let getJsonResponse: GetJsonResponse;
@@ -25,47 +23,36 @@ export class GetDataAndSave {
     const shangriLaApiResponse = getJsonResponse.jsonPerse();
 
     const animeLibraryResponse = await Promise.all(
-      shangriLaApiResponse.map(
-        async (animeData): Promise<z.infer<typeof AnimeLibrary>> => {
-          try {
-            const metaData = await GetMetaData.getSuperagentResponse(
-              animeData.public_url
-            );
-            return {
-              ...animeData,
-              ...{
-                ogp_description: metaData.description(),
-                ogp_image_url: metaData.image(),
-              },
-            };
-          } catch (e) {
-            return {
-              ...animeData,
-              ...{
-                ogp_description: "",
-                ogp_image_url: "",
-              },
-            };
-          }
+      shangriLaApiResponse.map(async (animeData): Promise<z.infer<typeof AnimeLibrary>> => {
+        try {
+          const metaData = await GetMetaData.getSuperagentResponse(animeData.public_url);
+          return {
+            ...animeData,
+            ...{
+              ogp_description: metaData.description(),
+              ogp_image_url: metaData.image(),
+            },
+          };
+        } catch (e) {
+          return {
+            ...animeData,
+            ...{
+              ogp_description: "",
+              ogp_image_url: "",
+            },
+          };
         }
-      )
+      })
     );
 
     // titleを?などをreplaceしたものにする
-    const animeLibraryResponseReplaced = animeLibraryResponse.map(
-      (animeData) => {
-        animeData.title = ReplaceInvalidChars.replaceInvalidChars(
-          animeData.title
-        );
-        return animeData;
-      }
-    );
+    const animeLibraryResponseReplaced = animeLibraryResponse.map((animeData) => {
+      animeData.title = ReplaceInvalidChars.replaceInvalidChars(animeData.title);
+      return animeData;
+    });
 
     // jsonを保存
-    const saveRes = ApiJson.save(
-      urlParams,
-      AnimeLibraryResponse.parse(animeLibraryResponseReplaced)
-    );
+    const saveRes = ApiJson.save(urlParams, AnimeLibraryResponse.parse(animeLibraryResponseReplaced));
 
     return saveRes;
   }

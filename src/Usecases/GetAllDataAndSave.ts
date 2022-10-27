@@ -11,7 +11,7 @@ export class GetAllDataAndSave extends GetDataAndSave {
     // すべての年とクールの情報
     const today = new Date();
     const nowYear = today.getFullYear();
-    let allUrlParams: UrlParams[] = [];
+    const allUrlParams: UrlParams[] = [];
     for (let year = ConstValues.startYear; year <= nowYear; year++) {
       for (let cool = 1; cool <= 4; cool++) {
         allUrlParams.push({ year: year, cool: cool } as UrlParams);

@@ -7,16 +7,11 @@ import { NotFoundResponseJson } from "../../Models/SaveJson/NotFoundResponseJson
 import { ConstValues } from "../Utils/ConstValues";
 
 export class ApiJson {
-  constructor() {}
-
   public static save(
     fileNameData: UrlParams,
-    saveData:
-      | z.infer<typeof AnimeLibraryResponse>
-      | z.infer<typeof NotFoundResponseJson>
+    saveData: z.infer<typeof AnimeLibraryResponse> | z.infer<typeof NotFoundResponseJson>
   ): void {
-    const fileName =
-      String(fileNameData.year) + "-" + String(fileNameData.cool) + ".json";
+    const fileName = String(fileNameData.year) + "-" + String(fileNameData.cool) + ".json";
     const stringSavedata = JSON.stringify(saveData, null, 2);
     try {
       fs.mkdirSync(ConstValues.jsonSaveDir, { recursive: true });
