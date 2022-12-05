@@ -59,8 +59,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "神風動画",
-    "ogp_image_url": "",
-    "ogp_description": ""
+    "ogp_image_url": "https://www.disney.co.jp/content/dam/disneyplus/home/program/star-wars-visions/sh.jpg",
+    "ogp_description": "『スター・ウォーズ：ビジョンズ』公式サイト。日本のアニメスタジオとスター・ウォーズのビッグプロジェクト始動！神風動画、トリガー、プロダクション I.Gなど7スタジオによるオリジナル短編アニメ映画集。ディズニープラス公式 Disneyplus.jp"
   },
   {
     "id": 1388,
@@ -143,7 +143,7 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "トムス・エンタテインメント",
-    "ogp_image_url": "https://occ-0-3011-116.1.nflxso.net/dnm/api/v6/U6_eu_lw5TPOkLCYXBHQsUANDp0/AAAABWiz2QNaiC4pMM8J-uWx6IgnT_1SJrbbdRycS0kRYaH-i1yiIg_ew7wZHuKZ0AfrRSK1PSh9.png",
+    "ogp_image_url": "https://occ-0-2301-114.1.nflxso.net/dnm/api/v6/U6_eu_lw5TPOkLCYXBHQsUANDp0/AAAABWiz2QNaiC4pMM8J-uWx6IgnT_1SJrbbdRycS0kRYaH-i1yiIg_ew7wZHuKZ0AfrRSK1PSh9.png",
     "ogp_description": ""
   },
   {
