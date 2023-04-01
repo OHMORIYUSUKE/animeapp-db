@@ -395,8 +395,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "studio ぱれっと",
-    "ogp_image_url": "https://kamikatsu-anime.jp/_image/sns2.jpg",
-    "ogp_description": "異世界で「宗教」始めました。怪しげなカルト宗教の教祖の息子・征人は、教団の無茶な修行で命を落とした――はずが、なんと流行りの異世界転生!そこは「神」や「宗教」の概念のない、征人にとっては理想の世界だった…が!?神無き世界で「宗教」を作る異色の”異世界転生”譚、開幕!!"
+    "ogp_image_url": "https://kamikatsu-anime.jp/ap/snsap.png",
+    "ogp_description": "転生世界でさらに転生？征人のあらたなカミサマ活動始まる！『神無き世界のあにまる活動』forスマートフォン"
   },
   {
     "id": 1751,
@@ -1004,7 +1004,7 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "音響マジックカプセル",
-    "ogp_image_url": "https://bokuyaba-anime.com/ogp03.jpg?v=1.1",
+    "ogp_image_url": "https://bokuyaba-anime.com/ogp03.jpg?v=1.2",
     "ogp_description": "“尊死”続出で大反響！今一番応援したくなる、青春初恋ラブコメ!!4月1日(土) 深夜1時30分よりTVアニメ放送開始！Prime Videoにて見放題独占配信決定!!"
   },
   {
@@ -1109,8 +1109,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "音響INSPIONエッジ",
-    "ogp_image_url": "https://mashle.pw/teaser/img/common/og-image3.png?v=0.01",
-    "ogp_description": "週刊少年ジャンプにて大好評連載中の、甲本一による漫画作品「マッシュル-MASHLE-」TVアニメ化決定！2023年4月放送開始！"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 1785,
@@ -1193,8 +1193,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "手塚プロダクション",
-    "ogp_image_url": "https://goddess-cafe.com/wp/wp-content/uploads/2022/11/ogp-image.png",
-    "ogp_description": "TVアニメ『女神のカフェテラス』"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 1789,
@@ -1319,7 +1319,7 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "パッショーネ×スタジオリングス",
-    "ogp_image_url": "https://watayuri-anime.com/assets/og/og4_v2.jpg",
+    "ogp_image_url": "https://watayuri-anime.com/assets/og/og_aprilfool.jpg",
     "ogp_description": "コミック百合姫の人気作『私の百合はお仕事です！』2023年4月6日より放送開始！"
   }
 ]
