@@ -605,8 +605,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "studio A-CAT",
-    "ogp_image_url": "https://nouminkanren.com/wordpress/wp-content/themes/nouminkanren/assets/images/common/ogp_2.jpg",
-    "ogp_description": "TVアニメ「農民関連のスキルばっか上げてたら何故か強くなった。」公式サイト　原作：樽戸アキ・しょぼんぬ（双葉社　モンスターコミックス）キャスト：榎木淳弥、田中美海、大久保瑠美、諏訪彩花 ほか"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 1631,
@@ -920,8 +920,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "CloverWorks",
-    "ogp_image_url": "https://bocchi.rocks/assets/siteinfo/og_image_220914.jpg",
-    "ogp_description": "TVアニメ「ぼっち・ざ・ろっく！」10.8 ON AIR"
+    "ogp_image_url": "https://bocchi.rocks/assets/siteinfo/og_image_230521.png",
+    "ogp_description": "TVアニメ「ぼっち・ざ・ろっく！」2024年春、劇場総集編上映決定！"
   },
   {
     "id": 1646,
