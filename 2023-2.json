@@ -798,27 +798,6 @@
     "ogp_description": ""
   },
   {
-    "id": 1770,
-    "title": "天国大魔境",
-    "title_short1": "天国大魔境",
-    "title_short2": "",
-    "title_short3": "",
-    "title_en": "",
-    "public_url": "https://tdm-anime.com/",
-    "twitter_account": "tdm_anime",
-    "twitter_hash_tag": "天国大魔境",
-    "cours_id": 38,
-    "created_at": "2023-03-26T16:54:53",
-    "updated_at": "2023-03-26T16:54:53",
-    "sex": 0,
-    "sequel": 0,
-    "city_code": 0,
-    "city_name": "",
-    "product_companies": "天国大魔境",
-    "ogp_image_url": "https://tdm-anime.com/assets/siteinfo/og_image.jpg?v3",
-    "ogp_description": "2023年4月1日より TOKYO MX/MBSほかにてTVアニメ放送開始！『このマンガがすごい!』2019 オトコ編 第1位。予測不可能な近未来SFアドベンチャー！ アニメーション制作：Production I.G　"
-  },
-  {
     "id": 1771,
     "title": "転生貴族の異世界冒険録 ～自重を知らない神々の使徒～",
     "title_short1": "転生貴族の異世界冒険録 ～自重を知らない神々の使徒～",
@@ -1321,5 +1300,26 @@
     "product_companies": "パッショーネ×スタジオリングス",
     "ogp_image_url": "https://watayuri-anime.com/assets/og/og4_v3.jpg",
     "ogp_description": "コミック百合姫の人気作『私の百合はお仕事です！』2023年4月6日より放送開始！"
+  },
+  {
+    "id": 1770,
+    "title": "天国大魔境",
+    "title_short1": "天国大魔境",
+    "title_short2": "",
+    "title_short3": "",
+    "title_en": "",
+    "public_url": "https://tdm-anime.com/",
+    "twitter_account": "tdm_anime",
+    "twitter_hash_tag": "天国大魔境",
+    "cours_id": 38,
+    "created_at": "2023-03-26T16:54:53",
+    "updated_at": "2023-03-26T16:54:53",
+    "sex": 0,
+    "sequel": 0,
+    "city_code": 0,
+    "city_name": "",
+    "product_companies": "Production I.G",
+    "ogp_image_url": "https://tdm-anime.com/assets/siteinfo/og_image.jpg?v3",
+    "ogp_description": "2023年4月1日より TOKYO MX/MBSほかにてTVアニメ放送開始！『このマンガがすごい!』2019 オトコ編 第1位。予測不可能な近未来SFアドベンチャー！ アニメーション制作：Production I.G　"
   }
 ]
