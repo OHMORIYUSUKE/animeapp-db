@@ -605,8 +605,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "studio A-CAT",
-    "ogp_image_url": "https://nouminkanren.com/wordpress/wp-content/themes/nouminkanren/assets/images/common/ogp_2.jpg",
-    "ogp_description": "TVアニメ「農民関連のスキルばっか上げてたら何故か強くなった。」公式サイト　原作：樽戸アキ・しょぼんぬ（双葉社　モンスターコミックス）キャスト：榎木淳弥、田中美海、大久保瑠美、諏訪彩花 ほか"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 1631,
@@ -837,7 +837,7 @@
     "city_name": "",
     "product_companies": "studioぴえろ",
     "ogp_image_url": "https://bleach-anime.com/ogp2.png",
-    "ogp_description": "「BLEACH 千年血戦篇-決別譚-」TV東京系にて2023年7月より放送開始"
+    "ogp_description": "「BLEACH 千年血戦篇-訣別譚-」TV東京系にて2023年7月より放送開始"
   },
   {
     "id": 1642,
