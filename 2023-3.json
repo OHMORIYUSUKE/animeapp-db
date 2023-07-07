@@ -416,8 +416,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "エポック社",
-    "ogp_image_url": "https://www.sylvanianfamilies.com/assets/jp/special/tv/img/share.jpg",
-    "ogp_description": "シルバニアファミリーのテレビアニメが各局にて放送中！各種動画配信サービスでも配信しているよ！ぜひみてね！"
+    "ogp_image_url": "https://www.sylvanianfamilies.com/assets/jp/special/tv/img/share.jpg?20230706",
+    "ogp_description": "シルバニアファミリーの新作アニメーションが放送決定！各種動画配信サービスでも順次配信しているよ！ぜひみてね！"
   },
   {
     "id": 1815,
@@ -542,8 +542,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "横浜アニメーションラボ＆クラウドハーツ",
-    "ogp_image_url": "https://www.tbs.co.jp/anime/seija/img/ogp.jpg",
-    "ogp_description": "TVアニメ「聖者無双〜サラリーマン、異世界で生き残るために歩む道〜」TBSサイトです。2023年7月から放送開始"
+    "ogp_image_url": "",
+    "ogp_description": ""
   },
   {
     "id": 1821,
@@ -1130,7 +1130,7 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "GEEKTOYS",
-    "ogp_image_url": "https://liar-liar-anime.com/common/images/og02.jpg",
+    "ogp_image_url": "https://liar-liar-anime.com/common/images/og03.jpg",
     "ogp_description": "嘘つきは最強の始まり―― 絶対に負けられない学園頭脳ゲーム＆ラブコメ『ライアー・ライアー』（MF文庫J刊） 2023年TVアニメ化決定！"
   },
   {
