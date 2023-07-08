@@ -542,8 +542,8 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "横浜アニメーションラボ＆クラウドハーツ",
-    "ogp_image_url": "",
-    "ogp_description": ""
+    "ogp_image_url": "https://www.tbs.co.jp/anime/seija/img/ogp.jpg",
+    "ogp_description": "TVアニメ「聖者無双〜サラリーマン、異世界で生き残るために歩む道〜」TBSサイトです。2023年7月から放送開始"
   },
   {
     "id": 1821,
@@ -941,7 +941,7 @@
     "city_code": 0,
     "city_name": "",
     "product_companies": "サテライト",
-    "ogp_image_url": "https://www.helck-anime.com/images/og-image.jpg",
+    "ogp_image_url": "https://www.helck-anime.com/wp/wp-content/uploads/2023/07/og-image.jpg",
     "ogp_description": "TVアニメ「Helck」2023年7月～日本テレビ・ＢＳ日テレにて放送開始！人類を滅ぼさんとする人間の勇者。彼が見た悲劇とは――。魔族×勇者の冒険ファンタジー！"
   },
   {
